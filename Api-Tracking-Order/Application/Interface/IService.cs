@@ -9,7 +9,7 @@ namespace Application.Interface
 {
     public interface IService
     {
-        public Task<int> userQuery(UserDTO login);
+        Task<int> userQuery(UserDTO login);
 
     }
 }

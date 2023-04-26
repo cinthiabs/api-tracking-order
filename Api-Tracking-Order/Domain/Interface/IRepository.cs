@@ -9,5 +9,7 @@ namespace Domain.Interface
     public interface IRepository
     {
         Task<int> userQuery(string name, string password);
+        Task<bool> LogError(string method, string error, string application);
+
     }
 }

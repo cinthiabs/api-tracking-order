@@ -9,5 +9,7 @@ namespace Service.Interface
     public interface IRegistration
     {
         Task<int> userQuery(string name, string password);
+        Task<bool> LogError(string method, string error, string application);
+
     }
 }

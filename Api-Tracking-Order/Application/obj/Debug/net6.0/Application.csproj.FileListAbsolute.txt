@@ -10,3 +10,8 @@ C:\GITHUB\api-tracking-order\Api-Tracking-Order\Application\obj\Debug\net6.0\App
 C:\GITHUB\api-tracking-order\Api-Tracking-Order\Application\obj\Debug\net6.0\refint\Application.dll
 C:\GITHUB\api-tracking-order\Api-Tracking-Order\Application\obj\Debug\net6.0\Application.pdb
 C:\GITHUB\api-tracking-order\Api-Tracking-Order\Application\obj\Debug\net6.0\ref\Application.dll
+C:\GITHUB\api-tracking-order\Api-Tracking-Order\Application\bin\Debug\net6.0\Domain.dll
+C:\GITHUB\api-tracking-order\Api-Tracking-Order\Application\bin\Debug\net6.0\Service.dll
+C:\GITHUB\api-tracking-order\Api-Tracking-Order\Application\bin\Debug\net6.0\Service.pdb
+C:\GITHUB\api-tracking-order\Api-Tracking-Order\Application\bin\Debug\net6.0\Domain.pdb
+C:\GITHUB\api-tracking-order\Api-Tracking-Order\Application\obj\Debug\net6.0\Application.csproj.CopyComplete

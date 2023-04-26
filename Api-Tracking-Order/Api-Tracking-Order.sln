@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api-Tracking-Order", "Api-Tracking-Order\Api-Tracking-Order.csproj", "{E31B56CB-73A7-4A06-ABAC-CFE2D8436D20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api-Tracking-Order", "Api-Tracking-Order\Api-Tracking-Order.csproj", "{E31B56CB-73A7-4A06-ABAC-CFE2D8436D20}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{EE84B2F3-4F5C-432F-80C8-74DC992E4D1F}"
 EndProject
@@ -15,13 +15,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{847A75C7-5935-41C4-97E5-0C60DF4EA9C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{7F6AF4B8-3A8D-4C10-B54C-65CDA6BE23A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{7F6AF4B8-3A8D-4C10-B54C-65CDA6BE23A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{7D1A0E91-0AD8-426E-AE8C-FB2F2D7C7087}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{7D1A0E91-0AD8-426E-AE8C-FB2F2D7C7087}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{4EBADB59-1FE5-4F2A-B0AA-FFF849C2A073}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{4EBADB59-1FE5-4F2A-B0AA-FFF849C2A073}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7D1A0E91-0AD8-426E-AE8C-FB2F2D7C7087} = {7D1A0E91-0AD8-426E-AE8C-FB2F2D7C7087}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "Infra\Infra.csproj", "{D57F03EA-F477-49F9-9CE5-3BC9B0481D8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra", "Infra\Infra.csproj", "{D57F03EA-F477-49F9-9CE5-3BC9B0481D8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

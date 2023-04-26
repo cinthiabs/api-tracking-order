@@ -248,7 +248,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\GITHUB\\api-tracking-order\\Api-Tracking-Order\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\GITHUB\\api-tracking-order\\Api-Tracking-Order\\Domain\\Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -260,6 +264,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -307,7 +321,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\GITHUB\\api-tracking-order\\Api-Tracking-Order\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\GITHUB\\api-tracking-order\\Api-Tracking-Order\\Domain\\Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -319,6 +337,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "NEST": {
+              "target": "Package",
+              "version": "[7.17.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

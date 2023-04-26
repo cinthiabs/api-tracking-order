@@ -46,3 +46,13 @@ C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net
 C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
 C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\AutoMapper.dll
+C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Dapper.dll
+C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Elasticsearch.Net.dll
+C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Nest.dll
+C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
