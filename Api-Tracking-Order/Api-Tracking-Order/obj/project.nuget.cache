@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "JFw3lLEfJ1f58bKfygCpeYVe/rTAoXHUxwG25Ucx+tPQB9E3JIKIwEHwrShVUdSwZF3NJMmoJYJjTQr2Mzw6LQ==",
+  "dgSpecHash": "NHuSt3sfNqL4V08Y7WHNLjyuYFUzyf54hDryt+PG+CnJ5RZ2eAcCbXSwqt1ioEY6rnL1z4ruC0aegImdX5X5gQ==",
   "success": true,
   "projectFilePath": "C:\\GITHUB\\api-tracking-order\\Api-Tracking-Order\\Api-Tracking-Order\\Api-Tracking-Order.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\LENOVO-EQP364\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\LENOVO-EQP364\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.16\\microsoft.aspnetcore.authentication.jwtbearer.6.0.16.nupkg.sha512",
-    "C:\\Users\\LENOVO-EQP364\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\LENOVO-EQP364\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\LENOVO-EQP364\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\LENOVO-EQP364\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.29.0\\microsoft.identitymodel.abstractions.6.29.0.nupkg.sha512",
     "C:\\Users\\LENOVO-EQP364\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.29.0\\microsoft.identitymodel.jsonwebtokens.6.29.0.nupkg.sha512",

@@ -8,5 +8,6 @@ namespace Domain.Interface
 {
     public interface IRepository
     {
+        Task<int> userQuery(string name, string password);
     }
 }

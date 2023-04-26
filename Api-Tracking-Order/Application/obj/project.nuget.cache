@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "AnmGGHcGnB8pt3wL3mQjvsVWjHRP1lC0t/k45221Sevy7OlO36ZLNlSMjSx5oYx+RTeUo80M6Oc+I+wJOdzegw==",
+  "dgSpecHash": "0wU3FApSCNcbBztx5t0QGj6jQe2el4hzphs4lPlHItYtFgQfcA5wIuiGLkwvjKYpb7ZR/9GwHAUbDO169+E5Fg==",
   "success": true,
   "projectFilePath": "C:\\GITHUB\\api-tracking-order\\Api-Tracking-Order\\Application\\Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\LENOVO-EQP364\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\LENOVO-EQP364\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
