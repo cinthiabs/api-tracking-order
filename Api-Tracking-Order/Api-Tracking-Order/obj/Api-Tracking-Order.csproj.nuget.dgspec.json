@@ -35,9 +35,6 @@
               "C:\\GITHUB\\api-tracking-order\\Api-Tracking-Order\\Application\\Application.csproj": {
                 "projectPath": "C:\\GITHUB\\api-tracking-order\\Api-Tracking-Order\\Application\\Application.csproj"
               },
-              "C:\\GITHUB\\api-tracking-order\\Api-Tracking-Order\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\GITHUB\\api-tracking-order\\Api-Tracking-Order\\Domain\\Domain.csproj"
-              },
               "C:\\GITHUB\\api-tracking-order\\Api-Tracking-Order\\Infra\\Infra.csproj": {
                 "projectPath": "C:\\GITHUB\\api-tracking-order\\Api-Tracking-Order\\Infra\\Infra.csproj"
               },
@@ -64,6 +61,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",

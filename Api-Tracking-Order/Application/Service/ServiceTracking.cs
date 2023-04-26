@@ -10,15 +10,15 @@ using System.Threading.Tasks;
 
 namespace Application.Service
 {
-    public class Service : IService
+    public class ServiceTracking : IServiceTracking
     {
         private readonly IRegistration _Registration;
-        private readonly IMapper _mapper;
+        //private readonly IMapper _mapper;
 
-        public Service(IRegistration Registration, IMapper mapper)
+        public ServiceTracking(IRegistration Registration)
         {
             _Registration = Registration;
-            _mapper = mapper;
+            //_mapper = mapper;
         }
         public async Task<int> userQuery(UserDTO login)
         {

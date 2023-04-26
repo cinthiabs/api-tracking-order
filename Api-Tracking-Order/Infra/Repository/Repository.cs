@@ -25,7 +25,7 @@ namespace Infra.Repository
             int ret = 0;
             try
             {
-                string sqlQuery = $@"select count(0) from Authentication WITH(NOLOCK) where user = '{name}' and active = 1 and password ='{password}';";
+                string sqlQuery = $@"select count(0) from Authentication(NOLOCK) where [user] = '{name}' and [active] = 1 and [password] ='{password}';";
                 ret = await _Connection.ExecProcedure<int>(sqlQuery);
             }
             catch (Exception ex)

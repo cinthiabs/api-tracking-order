@@ -8,6 +8,6 @@ namespace Infra.DapperConfig
 {
     public class Setting
     {
-        public static string ConnectionString { get; internal set; }
+        public static string ConnectionString { get; set; }
     }
 }

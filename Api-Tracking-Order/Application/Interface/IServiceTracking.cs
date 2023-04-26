@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Application.Interface
 {
-    public interface IService
+    public interface IServiceTracking
     {
-        Task<int> userQuery(UserDTO login);
+        public Task<int> userQuery(UserDTO login);
 
     }
 }

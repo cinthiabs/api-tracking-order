@@ -14,8 +14,8 @@ namespace Api_Tracking_Order.Controllers
     public class LoginController : ControllerBase
     {
         private readonly IConfiguration _config;
-        private readonly IService _service;
-        public LoginController(IConfiguration Configuration, IService service)
+        private readonly IServiceTracking _service;
+        public LoginController(IConfiguration Configuration, IServiceTracking service)
         {
             _config = Configuration;
             _service = service;
@@ -54,10 +54,10 @@ namespace Api_Tracking_Order.Controllers
         }
         private string TokenJWT()
         {
-            var issuer = "Login";
-            var audience = "full";
+            var issuer = _config["Jwt:Issuer"];
+            var audience = _config["Jwt:Audience"];
             _ = DateTime.Now.AddMinutes(60);
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("62Y3ZN33JVQWQDBWVSGQZBKZAYCPQ6"));
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
             var token = new JwtSecurityToken(issuer: issuer, audience: audience, expires: DateTime.Now.AddMinutes(60), signingCredentials: credentials);
             var tokenHandler = new JwtSecurityTokenHandler();
@@ -66,8 +66,8 @@ namespace Api_Tracking_Order.Controllers
         }
         private async Task<bool> UserValidation(UserDTO login)
         {
-            var consulta = await _service.userQuery(login);
-            var validation = consulta > 0 ? true : false;
+            var query = await _service.userQuery(login);
+            var validation = query > 0 ? true : false;
             return validation;
         }
     }
