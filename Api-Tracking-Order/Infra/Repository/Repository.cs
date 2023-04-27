@@ -15,9 +15,22 @@ namespace Infra.Repository
             _Connection = Connection;
         }
 
-        public Task<bool> LogError(string method, string error, string application)
+        public async Task<bool> LogError(string method, string error, string application)
         {
-            throw new NotImplementedException();
+            var returnQuery = false;
+            var date = DateTime.Now;
+            var dt = date.ToString("yyyy-MM-dd HH:mm:ss");
+            try
+            {
+                error = error.Replace("'", "");
+                var sqlQuery = $@"Insert into LogErrorAPI (date,method,error,application) values ('{dt}','{method}','{error}', '{application}')";
+                returnQuery = await _Connection.ExecCommand(sqlQuery);
+            }
+            catch (Exception Ex)
+            {
+                _ = Ex.Message;
+            }
+            return returnQuery;
         }
 
         public async Task<int> userQuery(string name, string password)
@@ -31,7 +44,7 @@ namespace Infra.Repository
             catch (Exception ex)
             {
                 var erro = ex.Message;
-                await LogError("ConsultaUsuario - Data", erro, "API Sequoia - Brudam");
+                await LogError("userQuery - Data", erro, "API Tracking Order");
             }
             return ret;
         }

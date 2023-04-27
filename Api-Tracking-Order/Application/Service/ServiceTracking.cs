@@ -30,7 +30,7 @@ namespace Application.Service
             catch (Exception ex)
             {
                 var erro = ex.Message;
-                await _Registration.LogError("ConsultaUsuario - Application", erro, "API Sequoia - Brudam");
+                await _Registration.LogError("userQuery - Application", erro, "API Tracking Order");
             }
             return query;
         }
