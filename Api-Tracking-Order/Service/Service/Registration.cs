@@ -1,4 +1,6 @@
-﻿using Domain.Interface;
+﻿using Domain.Entities;
+using Domain.Interface;
+using Elasticsearch.Net;
 using Nest;
 using Service.Interface;
 using System;
@@ -17,9 +19,25 @@ namespace Service.Service
             _Repository = Repository;
         }
 
-        public Task<bool> LogError(string method, string error, string application)
+        public async Task<Root> GetOrder(int OrderID)
         {
-            throw new NotImplementedException();
+            var returnOrder = new Root();
+            try
+            {
+                returnOrder = await _Repository.GetOrder(OrderID);
+            }
+            catch (Exception Ex)
+            {
+                var Erro = Ex.Message;
+                //Log.Error($"Erro: {Erro}");
+            }
+            return returnOrder;
+        }
+
+        public async Task<bool> LogError(string method, string error, string application)
+        {
+            bool query = await _Repository.LogError(method, error, application);
+            return query;
         }
 
         public async Task<int> userQuery(string name, string password)

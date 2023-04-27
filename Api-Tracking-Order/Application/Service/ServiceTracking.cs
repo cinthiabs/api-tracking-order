@@ -1,6 +1,7 @@
 ﻿using Application.DTO;
 using Application.Interface;
 using AutoMapper;
+using Elasticsearch.Net;
 using Service.Interface;
 using System;
 using System.Collections.Generic;
@@ -13,13 +14,30 @@ namespace Application.Service
     public class ServiceTracking : IServiceTracking
     {
         private readonly IRegistration _Registration;
-        //private readonly IMapper _mapper;
+        private readonly IMapper _mapper;
 
-        public ServiceTracking(IRegistration Registration)
+        public ServiceTracking(IRegistration Registration, IMapper mapper)
         {
             _Registration = Registration;
-            //_mapper = mapper;
+            _mapper = mapper;
         }
+
+        public  async Task<RootDTO> GetOrder(int OrderID)
+        {
+            var returnOrder = new RootDTO();
+            try
+            {
+                var QueryOrder = await _Registration.GetOrder(OrderID);
+                returnOrder = _mapper.Map<RootDTO>(QueryOrder);
+            }
+            catch (Exception ex)
+            {
+                await _Registration.LogError("GetOrder - Application", ex.ToString(), "API Tracking Order");
+            }
+
+            return returnOrder;
+        }
+
         public async Task<int> userQuery(UserDTO login)
         {
             int query = 0;
@@ -29,8 +47,7 @@ namespace Application.Service
             }
             catch (Exception ex)
             {
-                var erro = ex.Message;
-                await _Registration.LogError("userQuery - Application", erro, "API Tracking Order");
+                await _Registration.LogError("userQuery - Application", ex.ToString(), "API Tracking Order");
             }
             return query;
         }

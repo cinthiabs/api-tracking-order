@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,6 @@ namespace Service.Interface
     {
         Task<int> userQuery(string name, string password);
         Task<bool> LogError(string method, string error, string application);
-
+        Task<Root> GetOrder(int OrderID);
     }
 }

@@ -1,4 +1,5 @@
-﻿using Domain.Interface;
+﻿using Domain.Entities;
+using Domain.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,15 +16,30 @@ namespace Infra.Repository
             _Connection = Connection;
         }
 
+        public async Task<Root> GetOrder(int OrderID)
+        {
+            var returnQuery = new Root();
+            try
+            {
+                var sqlQuery = $@"select * from OrderTable where orderid='{OrderID}' ";
+                returnQuery = await _Connection.ExecProcedure<Root>(sqlQuery);
+            }
+            catch (Exception EX)
+            {
+                _ = EX.Message;
+            }
+
+            return returnQuery;
+        }
+
         public async Task<bool> LogError(string method, string error, string application)
         {
             var returnQuery = false;
             var date = DateTime.Now;
-            var dt = date.ToString("yyyy-MM-dd HH:mm:ss");
             try
             {
                 error = error.Replace("'", "");
-                var sqlQuery = $@"Insert into LogErrorAPI (date,method,error,application) values ('{dt}','{method}','{error}', '{application}')";
+                var sqlQuery = $@"Insert into LogErrorAPI (date,method,error,application) values ('{date}','{method}','{error}', '{application}')";
                 returnQuery = await _Connection.ExecCommand(sqlQuery);
             }
             catch (Exception Ex)

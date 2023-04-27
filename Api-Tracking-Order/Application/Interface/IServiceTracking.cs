@@ -10,6 +10,7 @@ namespace Application.Interface
     public interface IServiceTracking
     {
         public Task<int> userQuery(UserDTO login);
+        public Task<RootDTO> GetOrder(int OrderID);
 
     }
 }

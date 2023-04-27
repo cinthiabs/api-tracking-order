@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "MLetJWfnP593vXljMy+ipkMGsAvPHG3SeVKoGaGg0fnKsncR6hyQ01DJk/qJg7Y2qqQcU5q6tRdIEv14B71qTw==",
+  "dgSpecHash": "WHEdU10Yb7A3Elgq+xJDjiABWN01M8/adb+H84OsSZ2+WrULoOV3rwWCa/Qra03myv8G7KPcITg2FsTM6WpyrQ==",
   "success": true,
   "projectFilePath": "C:\\GITHUB\\api-tracking-order\\Api-Tracking-Order\\Domain\\Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\LENOVO-EQP364\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

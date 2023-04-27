@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VnLkIFRJYQdhP0vx8KgMHc4xbLmLxAAKVUsB93j2mEd606TuZf1hLtMSoXpsXMXbVxV0ZO4p6ZfpyV3O1HJBiA==",
+  "dgSpecHash": "EIvRG1oayHAKJVQIqE4thhcamCgKGvhGqOCuQIWbbCaRC5yzyVYZAMAJxi74YXbd45RCLbNLEp7CkYvW3AxOJA==",
   "success": true,
   "projectFilePath": "C:\\GITHUB\\api-tracking-order\\Api-Tracking-Order\\Application\\Application.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\LENOVO-EQP364\\.nuget\\packages\\elasticsearch.net\\7.17.5\\elasticsearch.net.7.17.5.nupkg.sha512",
     "C:\\Users\\LENOVO-EQP364\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\LENOVO-EQP364\\.nuget\\packages\\nest\\7.17.5\\nest.7.17.5.nupkg.sha512",
+    "C:\\Users\\LENOVO-EQP364\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\LENOVO-EQP364\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\LENOVO-EQP364\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512"
   ],
