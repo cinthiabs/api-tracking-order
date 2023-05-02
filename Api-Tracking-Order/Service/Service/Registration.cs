@@ -27,7 +27,21 @@ namespace Service.Service
             }
             catch (Exception Ex)
             {
-                await _Repository.LogError("userQuery - Service", Ex.ToString(), "API Tracking Order");
+                await _Repository.LogError("GetOrder - Service", Ex.ToString(), "API Tracking Order");
+            }
+            return returnOrder;
+        }
+
+        public async Task<ReturnTracking> GetOrderTracking(int OrderID)
+        {
+            var returnOrder = new ReturnTracking();
+            try
+            {
+                returnOrder = await _Repository.GetOrderTracking(OrderID);
+            }
+            catch (Exception Ex)
+            {
+                await _Repository.LogError("GetOrderTracking - Service", Ex.ToString(), "API Tracking Order");
             }
             return returnOrder;
         }

@@ -9,7 +9,7 @@ using System.Text;
 namespace Api_Tracking_Order.Controllers
 {
 
-    [Route("api/login")]
+    [Route("api/[controller]")]
     [ApiController]
     public class LoginController : ControllerBase
     {

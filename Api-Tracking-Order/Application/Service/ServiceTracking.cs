@@ -38,6 +38,27 @@ namespace Application.Service
             return returnOrder;
         }
 
+        public async Task<ReturnTrackingDTO> GetOrderTracking(int OrderID)
+        {
+            var returnOrder = new ReturnTrackingDTO();
+            try
+            {
+                var QueryOrder = await _Registration.GetOrderTracking(OrderID);
+                returnOrder = _mapper.Map<ReturnTrackingDTO>(QueryOrder);
+            }
+            catch (Exception ex)
+            {
+                await _Registration.LogError("GetOrder - Application", ex.ToString(), "API Tracking Order");
+            }
+
+            return returnOrder;
+        }
+
+        public async Task<ReturnDTO> InsertOrder(RootDTO root)
+        {
+            throw new  NotImplementedException();
+        }
+
         public async Task<int> userQuery(UserDTO login)
         {
             int query = 0;

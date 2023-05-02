@@ -29,6 +29,7 @@ namespace Api_Tracking_Order
 
             services.AddControllers();
             services.AddAutoMapper(typeof(RootSetup));
+            services.AddAutoMapper(typeof(ReturnSetup));
 
             services.AddSwaggerGen(c =>
             {

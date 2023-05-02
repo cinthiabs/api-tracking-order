@@ -9,8 +9,9 @@ namespace Application.Interface
 {
     public interface IServiceTracking
     {
-        public Task<int> userQuery(UserDTO login);
-        public Task<RootDTO> GetOrder(int OrderID);
-
+        Task<int> userQuery(UserDTO login);
+        Task<RootDTO> GetOrder(int OrderID);
+        Task<ReturnDTO> InsertOrder(RootDTO root);
+        Task<ReturnTrackingDTO> GetOrderTracking(int OrderID);
     }
 }

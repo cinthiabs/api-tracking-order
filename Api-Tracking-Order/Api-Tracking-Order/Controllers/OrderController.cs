@@ -17,13 +17,39 @@ namespace Api_Tracking_Order.Controllers
         {
             _service = service;
         }
-        //[Authorize("Bearer")]
-        //[HttpPost]
-        //public async Task<ActionResult<ReturnDTO>> InsertOrder(RootDTO root)
-        //{
+        [Authorize("Bearer")]
+        [HttpPost]
+        public async Task<ActionResult<ReturnDTO>> InsertOrder(RootDTO root)
+        {
+            var retunOrder = new ReturnDTO();
+            try
+            {
+                var insertOrder = _service.InsertOrder(root);
+                if (insertOrder != null)
+                {
+                    retunOrder = new ReturnDTO()
+                    {
+                        message = "teste",
+                        status = 1
+                    };
+                }
+                else
+                {
+                    retunOrder = new ReturnDTO()
+                    {
+                        message = "teste",
+                        status = 0
+                    };
+                }
+            }
+            catch(Exception) 
+            {
+                return StatusCode(500, "Internal error!");
+            }
 
-        //}
-        //[Authorize("Bearer")]
+            return retunOrder;
+        }
+        [Authorize("Bearer")]
         [HttpGet]
         public async Task<ActionResult<RootDTO>> GetOrder(int OrderID)
         {
