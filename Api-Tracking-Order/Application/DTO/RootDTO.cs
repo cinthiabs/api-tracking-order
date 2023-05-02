@@ -10,81 +10,61 @@ namespace Application.DTO
 {
     public class RootDTO
     {
-        [JsonProperty("order")]
+        [JsonProperty("order_id")]
         public int OrderID { get; set; }
-        [JsonProperty("key")]
+        [JsonProperty("document")]
         public string? KeyNF { get; set; }
         [JsonProperty("number_nf")]
         public string? NumberNF { get; set; }
         [JsonProperty("series_nf")]
-        public string? SeriesNF { get; set; }
-        [JsonProperty("tp_nf")]
-        public int TpNF { get; set; }
+        public string? SeriesNFE { get; set; }
         [JsonProperty("date_nf")]
         public DateTime DateNF { get; set; }
         [JsonProperty("date_inclusion")]
         public DateTime Date_Inclusion { get; set; }
-        [JsonProperty("sender")]
-        public SenderDTO? Sender { get; set; }
-        [JsonProperty("addressee")]
-        public AddresseeDTO? Addressee { get; set; }
-        [JsonProperty("volume")]
-        public VolumeDTO? Volume { get; set; }
-        [JsonProperty("status")]
-        public int Status { get; set; } 
-
-    }
-    public class SenderDTO
-    {
-        [JsonProperty("name")]
-        public string? Name { get; set; }
-        [JsonProperty("identification")]
-        public string? Identification { get; set; }
-        [JsonProperty("ie")]
-        public string? IE { get; set; }
-        [JsonProperty("address")]
-        public string? Address { get; set; }
-        [JsonProperty("number")]
-        public string? Number { get; set; }
-        [JsonProperty("neighborhood")]
-        public string?Neighborhood { get; set; }
-        [JsonProperty("county")]
-        public string? County { get; set; }
-        [JsonProperty("cep")]
-        public string? CEP { get; set; }
-        [JsonProperty("uf")]
-        public string? UF { get; set; }
-    }
-    public class AddresseeDTO
-    {
-        [JsonProperty("name")]
-        public string? Name { get; set; }
-        [JsonProperty("identification")]
-        public string? Identification { get; set; }
-        [JsonProperty("ie")]
-        public string? IE { get; set; }
-        [JsonProperty("address")]
-        public string? Address { get; set; }
-        [JsonProperty("number")]
-        public string? Number { get; set; }
-        [JsonProperty("neighborhood")]
-        public string? Neighborhood { get; set; }
-        [JsonProperty("county")]
-        public string? County { get; set; }
-        [JsonProperty("cep")]
-        public string? CEP { get; set; }
-        [JsonProperty("uf")]
-        public string? UF { get; set; }
-    }
-    public class VolumeDTO
-    {
+        [JsonProperty("sender_name")]
+        public string? Sender_name { get; set; }
+        [JsonProperty("sender_identification")]
+        public string? Sender_identification { get; set; }
+        [JsonProperty("sender_ie")]
+        public string? Sender_ie { get; set; }
+        [JsonProperty("sender_address")]
+        public string? Sender_address { get; set; }
+        [JsonProperty("sender_number")]
+        public string? Sender_number { get; set; }
+        [JsonProperty("sender_neighborhood")]
+        public string? Sender_neighborhood { get; set; }
+        [JsonProperty("sender_county")]
+        public string? Sender_county { get; set; }
+        [JsonProperty("sender_cep")]
+        public string? Sender_cep { get; set; }
+        [JsonProperty("sender_uf")]
+        public string? Sender_uf { get; set; }
+        [JsonProperty("addressee_name")]
+        public string? Addressee_name { get; set; }
+        [JsonProperty("addressee_identification")]
+        public string? Addressee_identification { get; set; }
+        [JsonProperty("addressee_ie")]
+        public string? Addressee_ie { get; set; }
+        [JsonProperty("addressee_address")]
+        public string? Addressee_address { get; set; }
+        [JsonProperty("addressee_number")]
+        public string? Addressee_number { get; set; }
+        [JsonProperty("addressee_neighborhood")]
+        public string? Addressee_neighborhood { get; set; }
+        [JsonProperty("addressee_county")]
+        public string? Addressee_county { get; set; }
+        [JsonProperty("addressee_cep")]
+        public string? Addressee_cep { get; set; }
+        [JsonProperty("addressee_uf")]
+        public string? Addressee_uf { get; set; }
         [JsonProperty("additional_information")]
-        public string? Additional_Information { get; set; }
+        public string? Additional_information { get; set; }
         [JsonProperty("value")]
-        public string Value { get; set; }
-        [JsonProperty("vol")]
-        public string Vol { get; set; }
+        public float Value { get; set; }
+        [JsonProperty("volume")]
+        public int Volume { get; set; }
         [JsonProperty("weight")]
-        public string Weight { get; set; }
+        public float Weight { get; set; }
     }
 }

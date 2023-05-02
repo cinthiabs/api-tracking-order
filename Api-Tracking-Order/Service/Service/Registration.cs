@@ -18,7 +18,6 @@ namespace Service.Service
         {
             _Repository = Repository;
         }
-
         public async Task<Root> GetOrder(int OrderID)
         {
             var returnOrder = new Root();
@@ -28,8 +27,7 @@ namespace Service.Service
             }
             catch (Exception Ex)
             {
-                var Erro = Ex.Message;
-                //Log.Error($"Erro: {Erro}");
+                await _Repository.LogError("userQuery - Service", Ex.ToString(), "API Tracking Order");
             }
             return returnOrder;
         }
@@ -49,8 +47,7 @@ namespace Service.Service
             }
             catch (Exception ex)
             {
-                var erro = ex.Message;
-                await _Repository.LogError("userQuery - Service", erro, "API Tracking Order");
+                await _Repository.LogError("userQuery - Service", ex.ToString(), "API Tracking Order");
             }
             return query;
         }

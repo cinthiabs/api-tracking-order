@@ -26,7 +26,7 @@ namespace Infra.Repository
             }
             catch (Exception EX)
             {
-                _ = EX.Message;
+                await LogError("GetOrder - Data", EX.ToString(), "API Tracking Order");
             }
 
             return returnQuery;
@@ -59,8 +59,7 @@ namespace Infra.Repository
             }
             catch (Exception ex)
             {
-                var erro = ex.Message;
-                await LogError("userQuery - Data", erro, "API Tracking Order");
+                await LogError("userQuery - Data", ex.ToString(), "API Tracking Order");
             }
             return ret;
         }

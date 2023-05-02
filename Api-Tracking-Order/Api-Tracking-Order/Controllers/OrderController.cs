@@ -3,6 +3,7 @@ using Application.Interface;
 using Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Nest;
 
 namespace Api_Tracking_Order.Controllers
 {
@@ -26,18 +27,22 @@ namespace Api_Tracking_Order.Controllers
         [HttpGet]
         public async Task<ActionResult<RootDTO>> GetOrder(int OrderID)
         {
-            var returnOrder = new RootDTO();
             try
             {
-                returnOrder = await _service.GetOrder(OrderID);
-                if (returnOrder == null) { }
+                var returnOrder = await _service.GetOrder(OrderID);
+                if (returnOrder == null) 
+                {
+                    return StatusCode(400, "Order not found!");
+                }
+                else
+                {
+                    return returnOrder;
+                }
             }
-            catch (Exception Ex)
+            catch (Exception)
             {
-                //Log.Fatal($@"Erro:{Ex.Message}");
-                return StatusCode(500, "Erro interno entre em contato.");
+                return StatusCode(500, "Internal error!");
             }
-           return returnOrder;
         }
     }
 }
