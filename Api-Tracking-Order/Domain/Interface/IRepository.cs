@@ -13,6 +13,8 @@ namespace Domain.Interface
         Task<bool> LogError(string method, string error, string application);
         Task<Root> GetOrder(int OrderID);
         Task<ReturnTracking> GetOrderTracking(int OrderID);
+        Task<bool> InsertOrderTracking(int orderid, DateTime date, int statusID);
+        Task<bool> UpdateOrderTracing(int OrderID, int statusID);
 
     }
 }

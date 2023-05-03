@@ -59,6 +59,23 @@ namespace Application.Service
             throw new  NotImplementedException();
         }
 
+        public async Task<ReturnDTO> InsertOrderTracking(ReturnTrackingDTO tracking)
+        {
+            var returnTracking = new ReturnDTO();
+            try
+            {
+                var queryTracking = await _Registration.InsertOrderTracking(tracking.orderid,tracking.date,tracking.statusID);
+                returnTracking = _mapper.Map<ReturnDTO>(queryTracking);
+
+            }
+            catch (Exception ex)
+            {
+                await _Registration.LogError("InsertOrderTracking - Application", ex.ToString(), "API Tracking Order");
+            }
+
+            return returnTracking;
+        }
+
         public async Task<int> userQuery(UserDTO login)
         {
             int query = 0;

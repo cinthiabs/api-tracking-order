@@ -52,6 +52,22 @@ namespace Infra.Repository
             return returnQuery;
         }
 
+        public async Task<bool> InsertOrderTracking(int orderid, DateTime date, int statusID)
+        {
+            var returnQuery = false;
+            try
+            {
+                var sqlQuery = $@"insert into tracking values ('{orderid}','{statusID}','1','{date}') ";
+                returnQuery = await _Connection.ExecCommand(sqlQuery);
+            }
+            catch (Exception EX)
+            {
+                await LogError("InsertOrderTracking - Data", EX.ToString(), "API Tracking Order");
+            }
+
+            return returnQuery;
+        }
+
         public async Task<bool> LogError(string method, string error, string application)
         {
             var returnQuery = false;
@@ -66,6 +82,22 @@ namespace Infra.Repository
             {
                 _ = Ex.Message;
             }
+            return returnQuery;
+        }
+
+        public async Task<bool> UpdateOrderTracing(int OrderID, int statusID)
+        {
+            var returnQuery = false;
+            try
+            {
+                var sqlQuery = $@"update ordertable set statusid = {statusID}  where orderid='{OrderID}' ";
+                returnQuery = await _Connection.ExecCommand(sqlQuery);
+            }
+            catch (Exception EX)
+            {
+                await LogError("UpdateOrderTracing - Data", EX.ToString(), "API Tracking Order");
+            }
+
             return returnQuery;
         }
 

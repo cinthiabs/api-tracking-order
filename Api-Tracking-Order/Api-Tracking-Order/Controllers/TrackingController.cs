@@ -16,14 +16,13 @@ namespace Api_Tracking_Order.Controllers
         {
             _service = service;
         }
-        [Authorize("Bearer")]
         [HttpGet]
         public async Task<ActionResult<ReturnTrackingDTO>> GetOrderTracking(int OrderID)
         { 
             try
             {
                 var returnOrder = await _service.GetOrderTracking(OrderID);
-                if (returnOrder.orderid == 0)
+                if (returnOrder == null)
                 {
                     returnOrder = new ReturnTrackingDTO()
                     {
@@ -36,7 +35,6 @@ namespace Api_Tracking_Order.Controllers
                 else
                 {
                     return returnOrder;
-
                 }
                 return returnOrder;
             }
@@ -45,6 +43,18 @@ namespace Api_Tracking_Order.Controllers
                 return StatusCode(500, "Internal error!");
             }
         }
-
+        [HttpPost]
+        public async Task<ActionResult<ReturnDTO>> InsertOrderTracking(ReturnTrackingDTO tracking)
+        {
+            try
+            {
+                var returnbool = await _service.InsertOrderTracking(tracking);
+                return returnbool;
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "Internal error!");
+            }
+        }
     }
 }

@@ -42,7 +42,6 @@ namespace Application.AutoMapper
                 .ForMember(d => d.Sender_county, o => o.MapFrom(s => s.Sender_county))
                 .ForMember(d => d.Sender_cep, o => o.MapFrom(s => s.Sender_cep))
                 .ForMember(d => d.Sender_uf, o => o.MapFrom(s => s.Sender_uf)).ReverseMap();
-
         }
     }
 }

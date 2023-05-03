@@ -14,6 +14,7 @@ namespace Application.AutoMapper
         public ReturnSetup()
         {
             CreateMap<ReturnTrackingDTO, ReturnTracking>().ReverseMap();
+            CreateMap<ReturnDTO, Return>().ReverseMap();
         }
     }
 }

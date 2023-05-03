@@ -13,5 +13,6 @@ namespace Application.Interface
         Task<RootDTO> GetOrder(int OrderID);
         Task<ReturnDTO> InsertOrder(RootDTO root);
         Task<ReturnTrackingDTO> GetOrderTracking(int OrderID);
+        Task<ReturnDTO> InsertOrderTracking(ReturnTrackingDTO tracking);
     }
 }
