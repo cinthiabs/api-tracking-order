@@ -68,3 +68,5 @@ C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net
 C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Api-Tracking-Order.xml
+C:\GITHUB\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\obj\Debug\net6.0\Api-Tracking-Order.xml

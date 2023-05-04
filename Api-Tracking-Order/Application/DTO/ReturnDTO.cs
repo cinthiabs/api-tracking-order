@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace Application.DTO
 {
-    public class ReturnDTO
+    public class ReturnSucessDTO
     {
         public string? message { get; set; }
         public int status { get; set; }
+        public NextAccessDTO? data { get; set; }
     }
     public class NextAccessDTO
     {
@@ -19,7 +20,11 @@ namespace Application.DTO
         public string? access_key { get; set; }
         public string? expire_at { get; set; }
     }
-
+    public class ReturnDTO
+    {
+        public string? message { get; set; }
+        public int status { get; set; }
+    }
     public class ReturnTrackingDTO
     {
         public int orderid { get; set; }

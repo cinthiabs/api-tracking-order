@@ -11,6 +11,7 @@ using Microsoft.OpenApi.Models;
 using Service.Interface;
 using Service.Service;
 using System.Configuration;
+using System.Reflection;
 using System.Text;
 
 namespace Api_Tracking_Order
@@ -33,6 +34,10 @@ namespace Api_Tracking_Order
 
             services.AddSwaggerGen(c =>
             {
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
+
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Title = "API Tracking Order",
@@ -50,7 +55,7 @@ namespace Api_Tracking_Order
 
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
-                    Description = "JWT Authorization header using the Bearer, Example: Bearer {your Token}",
+                    Description = "JWT Authorization header using the Bearer, Example: Bearer [your Token]",
                     Name = "Authorization",
                     In = ParameterLocation.Header,
                     Type = SecuritySchemeType.ApiKey,

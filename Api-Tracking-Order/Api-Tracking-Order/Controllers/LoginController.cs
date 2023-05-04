@@ -20,7 +20,14 @@ namespace Api_Tracking_Order.Controllers
             _config = Configuration;
             _service = service;
         }
-
+        /// <param name="login">Teste</param>
+        /// <returns>Return data</returns>
+        /// <response code="200">Authenticated</response>
+        /// <response code="400">Access denied!</response>
+        /// <response code="500">Internal error please contact.</response>
+        [ProducesResponseType(typeof(ReturnSucessDTO),StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ReturnDTO), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ReturnDTO), StatusCodes.Status500InternalServerError)]
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] UserDTO login)
         {
@@ -31,16 +38,22 @@ namespace Api_Tracking_Order.Controllers
                 if (result)
                 {
                     var tokenString = TokenJWT();
-                    var data = new NextAccess();
+                    var returnSucess = new ReturnSucessDTO();
                     var nextToken = DateTime.Now.AddMinutes(60).ToString("yyyy-MM-ddTHH:mm:ss-ff:00");
 
-                    data = new NextAccess()
+                    returnSucess = new ReturnSucessDTO()
                     {
-                        message = "Authenticated",
-                        access_key = tokenString,
-                        expire_at = nextToken
+                        message = "OK",
+                        status = 200,
+                        data = new()
+                        {
+                            message = "Authenticated",
+                            access_key = tokenString,
+                            expire_at = nextToken
+                        }
                     };
-                    return Ok(new { message = "OK", status = 1, data });
+                   
+                    return Ok(returnSucess);
                 }
                 else
                 {

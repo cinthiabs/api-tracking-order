@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Api-Tracking-Order</name>
+    </assembly>
+    <members>
+        <member name="M:Api_Tracking_Order.Controllers.LoginController.Login(Application.DTO.UserDTO)">
+            <param name="login">Teste</param>
+            <returns>Return data</returns>
+            <response code="200">Authenticated</response>
+            <response code="400">Access denied!</response>
+            <response code="500">Internal error please contact.</response>
+        </member>
+        <member name="M:Api_Tracking_Order.Controllers.TrackingController.GetOrderTracking(System.Int32)">
+            <summary>
+            Get Order Tracking
+            </summary>
+            <param name="OrderID"> </param>
+            <remarks>Inform the ID of order </remarks>
+            <returns>Return data</returns>
+        </member>
+        <member name="M:Api_Tracking_Order.Controllers.TrackingController.InsertOrderTracking(Application.DTO.ReturnTrackingDTO)">
+            <summary>
+            Insert Order Tracking
+            </summary>
+            <remarks>
+            Please provide the StatusID according to the description below: 
+            1 - Imported Order, 2 - Waiting, 3 - In Transit, 4- Delivered, 5 - Late, 6 - Canceled, 7 - In delivery, 8 - Mechanical Problem, 9 - Failure, 10 - Finished
+            </remarks>
+            <param name="tracking"> </param>
+            <returns>Return data</returns>
+        </member>
+    </members>
+</doc>
