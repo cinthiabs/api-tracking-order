@@ -80,7 +80,7 @@ namespace Api_Tracking_Order.Controllers
         private async Task<bool> UserValidation(UserDTO login)
         {
             var query = await _service.userQuery(login);
-            var validation = query > 0 ? true : false;
+            var validation = query > 0;
             return validation;
         }
     }

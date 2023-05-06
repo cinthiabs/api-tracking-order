@@ -41,7 +41,7 @@ namespace Api_Tracking_Order.Controllers
                         statusID = 0,
                         date = DateTime.Now,
                     };
-                    return Unauthorized(returnOrder);
+                    return StatusCode(401,returnOrder);
                 }
                 else
                 {
@@ -62,10 +62,8 @@ namespace Api_Tracking_Order.Controllers
         /// Please provide the StatusID according to the description below: 
         /// 1 - Imported Order, 2 - Waiting, 3 - In Transit, 4- Delivered, 5 - Late, 6 - Canceled, 7 - In delivery, 8 - Mechanical Problem, 9 - Failure, 10 - Finished
         /// </remarks>
-        /// <param name="tracking"> </param>
         /// <returns>Return data</returns>
         [ProducesResponseType(typeof(ReturnDTO), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ReturnDTO), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ReturnDTO), StatusCodes.Status500InternalServerError)]
         [HttpPost]
         public async Task<ActionResult> InsertOrderTracking(ReturnTrackingDTO tracking)
@@ -77,7 +75,7 @@ namespace Api_Tracking_Order.Controllers
             }
             catch (Exception)
             {
-                var erro = (new ReturnDTO { message = "Internal error!", status = 500 });
+                var erro = (new ReturnDTO { message = "Internal server error!", status = 500 });
                 return StatusCode(500, erro);
             }
         }
