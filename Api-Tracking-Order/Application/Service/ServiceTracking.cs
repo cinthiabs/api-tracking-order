@@ -1,13 +1,7 @@
 ﻿using Application.DTO;
 using Application.Interface;
 using AutoMapper;
-using Elasticsearch.Net;
 using Service.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Service
 {
@@ -38,13 +32,13 @@ namespace Application.Service
             return returnOrder;
         }
 
-        public async Task<ReturnTrackingDTO> GetOrderTracking(int OrderID)
+        public async Task<List<ReturnTrackingDTO>> GetOrderTracking(int OrderID)
         {
-            var returnOrder = new ReturnTrackingDTO();
+            var returnOrder = new List<ReturnTrackingDTO>();
             try
             {
                 var QueryOrder = await _Registration.GetOrderTracking(OrderID);
-                returnOrder = _mapper.Map<ReturnTrackingDTO>(QueryOrder);
+                returnOrder = _mapper.Map<List<ReturnTrackingDTO>>(QueryOrder);
             }
             catch (Exception ex)
             {
@@ -54,17 +48,12 @@ namespace Application.Service
             return returnOrder;
         }
 
-        public async Task<ReturnDTO> InsertOrder(RootDTO root)
-        {
-            throw new  NotImplementedException();
-        }
-
         public async Task<ReturnDTO> InsertOrderTracking(ReturnTrackingDTO tracking)
         {
             var returnTracking = new ReturnDTO();
             try
             {
-                var queryTracking = await _Registration.InsertOrderTracking(tracking.orderid,tracking.date,tracking.statusID);
+                var queryTracking = await _Registration.InsertOrderTracking(tracking.Orderid,tracking.Date,tracking.StatusID);
                 returnTracking = _mapper.Map<ReturnDTO>(queryTracking);
 
             }

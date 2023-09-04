@@ -1,9 +1,6 @@
 ﻿using Application.DTO;
 using Application.Interface;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Nest;
-using System.Security.Cryptography.Xml;
 
 namespace Api_Tracking_Order.Controllers
 {
@@ -27,21 +24,24 @@ namespace Api_Tracking_Order.Controllers
         [ProducesResponseType(typeof(ReturnTrackingDTO), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ReturnDTO), StatusCodes.Status500InternalServerError)]
         [HttpGet]
-        public async Task<ActionResult> GetOrderTracking(int OrderID)
+        public async Task<ActionResult<List<ReturnTrackingDTO>>> GetOrderTracking(int OrderID)
         { 
             try
-            {                
+            {
                 var returnOrder = await _service.GetOrderTracking(OrderID);
-                if (returnOrder == null)
+                if (returnOrder == null || returnOrder.Count == 0) 
                 {
-                    returnOrder = new ReturnTrackingDTO()
+                    returnOrder = new List<ReturnTrackingDTO>
                     {
-                        orderid = 0,
-                        description = "Order not found!",
-                        statusID = 0,
-                        date = DateTime.Now,
+                        new ReturnTrackingDTO
+                        {
+                            Orderid = 0,
+                            Description = "Order not found!",
+                            StatusID = 0,
+                            Date = DateTime.Now,
+                        }
                     };
-                    return StatusCode(401,returnOrder);
+                        return StatusCode(401, returnOrder);
                 }
                 else
                 {
@@ -50,8 +50,8 @@ namespace Api_Tracking_Order.Controllers
             }
             catch (Exception)
             {
-                var erro = (new ReturnDTO{ message = "Internal error!", status = 500 });
-                return StatusCode(500,erro);
+                var erro = new ReturnDTO { Message = "Internal error!", Status = 500 };
+                return StatusCode(500, erro);
             }
         }
 
@@ -75,7 +75,7 @@ namespace Api_Tracking_Order.Controllers
             }
             catch (Exception)
             {
-                var erro = (new ReturnDTO { message = "Internal server error!", status = 500 });
+                var erro = (new ReturnDTO { Message = "Internal server error!", Status = 500 });
                 return StatusCode(500, erro);
             }
         }

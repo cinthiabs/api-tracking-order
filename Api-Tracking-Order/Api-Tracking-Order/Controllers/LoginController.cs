@@ -1,6 +1,5 @@
 ﻿using Application.DTO;
 using Application.Interface;
-using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -20,6 +19,7 @@ namespace Api_Tracking_Order.Controllers
             _config = Configuration;
             _service = service;
         }
+
         /// <param name="login">Teste</param>
         /// <returns>Return data</returns>
         /// <response code="200">Authenticated</response>
@@ -43,12 +43,12 @@ namespace Api_Tracking_Order.Controllers
 
                     returnSucess = new ReturnSucessDTO()
                     {
-                        message = "OK",
-                        status = 200,
-                        data = new()
+                        Message = "OK",
+                        Status = 200,
+                        Data = new()
                         {
-                            message = "Authenticated",
-                            access_key = tokenString,
+                            Message = "Authenticated",
+                            Access_key = tokenString,
                             expire_at = nextToken
                         }
                     };
@@ -57,7 +57,7 @@ namespace Api_Tracking_Order.Controllers
                 }
                 else
                 {
-                    return Unauthorized(new ReturnDTO { message = "Access denied!", status  = 0 });
+                    return Unauthorized(new ReturnDTO { Message = "Access denied!", Status  = 0 });
                 }
             }
             catch (Exception)
@@ -69,13 +69,18 @@ namespace Api_Tracking_Order.Controllers
         {
             var issuer = _config["Jwt:Issuer"];
             var audience = _config["Jwt:Audience"];
-            _ = DateTime.Now.AddMinutes(60);
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-            var token = new JwtSecurityToken(issuer: issuer, audience: audience, expires: DateTime.Now.AddMinutes(60), signingCredentials: credentials);
+            var expires = DateTime.Now.AddMinutes(60);
+
+            var token = new JwtSecurityToken(
+                issuer: issuer,
+                audience: audience,
+                expires: expires,
+                signingCredentials: credentials
+            );
             var tokenHandler = new JwtSecurityTokenHandler();
-            var stringToken = tokenHandler.WriteToken(token);
-            return stringToken;
+            return tokenHandler.WriteToken(token);
         }
         private async Task<bool> UserValidation(UserDTO login)
         {

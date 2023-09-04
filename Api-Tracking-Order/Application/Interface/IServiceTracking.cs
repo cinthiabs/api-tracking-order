@@ -11,8 +11,7 @@ namespace Application.Interface
     {
         Task<int> userQuery(UserDTO login);
         Task<RootDTO> GetOrder(int OrderID);
-        Task<ReturnDTO> InsertOrder(RootDTO root);
-        Task<ReturnTrackingDTO> GetOrderTracking(int OrderID);
+        Task<List<ReturnTrackingDTO>> GetOrderTracking(int OrderID);
         Task<ReturnDTO> InsertOrderTracking(ReturnTrackingDTO tracking);
     }
 }

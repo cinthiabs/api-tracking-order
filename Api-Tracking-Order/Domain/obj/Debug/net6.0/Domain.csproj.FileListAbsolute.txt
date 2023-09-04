@@ -10,3 +10,39 @@ C:\GITHUB\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.d
 C:\GITHUB\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\refint\Domain.dll
 C:\GITHUB\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.pdb
 C:\GITHUB\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\ref\Domain.dll
+C:\git\api-tracking-order\Api-Tracking-Order\Domain\bin\Debug\net6.0\Domain.deps.json
+C:\git\api-tracking-order\Api-Tracking-Order\Domain\bin\Debug\net6.0\Domain.dll
+C:\git\api-tracking-order\Api-Tracking-Order\Domain\bin\Debug\net6.0\Domain.pdb
+C:\git\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+C:\git\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+C:\git\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+C:\git\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+C:\git\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.dll
+C:\git\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\refint\Domain.dll
+C:\git\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.pdb
+C:\git\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\ref\Domain.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Domain\bin\Debug\net6.0\Domain.deps.json
+D:\GIT\api-tracking-order\Api-Tracking-Order\Domain\bin\Debug\net6.0\Domain.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Domain\bin\Debug\net6.0\Domain.pdb
+D:\GIT\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+D:\GIT\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\GIT\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+D:\GIT\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+D:\GIT\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+D:\GIT\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\refint\Domain.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.pdb
+D:\GIT\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\ref\Domain.dll
+C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Domain\bin\Debug\net6.0\Domain.deps.json
+C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Domain\bin\Debug\net6.0\Domain.dll
+C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Domain\bin\Debug\net6.0\Domain.pdb
+C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.dll
+C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\refint\Domain.dll
+C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\Domain.pdb
+C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Domain\obj\Debug\net6.0\ref\Domain.dll

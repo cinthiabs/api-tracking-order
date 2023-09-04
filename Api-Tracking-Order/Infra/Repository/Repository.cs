@@ -1,10 +1,5 @@
 ﻿using Domain.Entities;
 using Domain.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infra.Repository
 {
@@ -24,29 +19,29 @@ namespace Infra.Repository
                 var sqlQuery = $@"select * from OrderTable where orderid='{OrderID}' ";
                 returnQuery = await _Connection.ExecProcedure<Root>(sqlQuery);
             }
-            catch (Exception EX)
+            catch (Exception ex)
             {
-                await LogError("GetOrder - Data", EX.ToString(), "API Tracking Order");
+                await LogError("GetOrder - Data", ex.ToString(), "API Tracking Order");
             }
 
             return returnQuery;
         }
 
-        public async Task<ReturnTracking> GetOrderTracking(int OrderID)
+        public async Task<List<ReturnTracking>> GetOrderTracking(int OrderID)
         {
-            var returnQuery = new ReturnTracking();
+            var returnQuery = new List<ReturnTracking>();
             try
             {
-                var sqlQuery = $@"select ode.orderId,tra.date,ord.description,tra.statusID  
-                                from ordertable ode	 
-                                inner join tracking tra on ode.orderId = tra.OrderID
-                                inner join StatusOrder ord on ord.StatusId=ode.StatusId
-                                where tra.active = 1 and ode.orderid='{OrderID}' ";
-                returnQuery = await _Connection.ExecProcedure<ReturnTracking>(sqlQuery);
+                var sqlQuery = $@"select ode.orderId, tra.date, ord.description, tra.statusID  
+                        from ordertable ode	 
+                        inner join tracking tra on ode.orderId = tra.OrderID
+                        inner join StatusOrder ord on ord.StatusId = ode.StatusId
+                        where tra.active = 1 and ode.orderid='{OrderID}' ";
+                returnQuery = (List<ReturnTracking>)await _Connection.ExecSelectList<ReturnTracking>(sqlQuery);
             }
-            catch (Exception EX)
+            catch (Exception ex)
             {
-                await LogError("GetOrderTracking - Data", EX.ToString(), "API Tracking Order");
+                await LogError("GetOrderTracking - Data", ex.ToString(), "API Tracking Order");
             }
 
             return returnQuery;
@@ -60,9 +55,9 @@ namespace Infra.Repository
                 var sqlQuery = $@"insert into tracking values ('{orderid}','{statusID}','1','{date}') ";
                 returnQuery = await _Connection.ExecCommand(sqlQuery);
             }
-            catch (Exception EX)
+            catch (Exception ex)
             {
-                await LogError("InsertOrderTracking - Data", EX.ToString(), "API Tracking Order");
+                await LogError("InsertOrderTracking - Data", ex.ToString(), "API Tracking Order");
             }
 
             return returnQuery;
@@ -78,9 +73,9 @@ namespace Infra.Repository
                 var sqlQuery = $@"Insert into LogErrorAPI (date,method,error,application) values ('{date}','{method}','{error}', '{application}')";
                 returnQuery = await _Connection.ExecCommand(sqlQuery);
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                _ = Ex.Message;
+                _ = ex.Message;
             }
             return returnQuery;
         }
@@ -93,9 +88,9 @@ namespace Infra.Repository
                 var sqlQuery = $@"update ordertable set statusid = {statusID}  where orderid='{OrderID}' ";
                 returnQuery = await _Connection.ExecCommand(sqlQuery);
             }
-            catch (Exception EX)
+            catch (Exception ex)
             {
-                await LogError("UpdateOrderTracing - Data", EX.ToString(), "API Tracking Order");
+                await LogError("UpdateOrderTracing - Data", ex.ToString(), "API Tracking Order");
             }
 
             return returnQuery;

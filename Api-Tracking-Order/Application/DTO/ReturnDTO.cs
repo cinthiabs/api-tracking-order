@@ -10,26 +10,26 @@ namespace Application.DTO
 {
     public class ReturnSucessDTO
     {
-        public string? message { get; set; }
-        public int status { get; set; }
-        public NextAccessDTO? data { get; set; }
+        public string? Message { get; set; }
+        public int Status { get; set; }
+        public NextAccessDTO? Data { get; set; }
     }
     public class NextAccessDTO
     {
-        public string? message { get; set; }
-        public string? access_key { get; set; }
+        public string? Message { get; set; }
+        public string? Access_key { get; set; }
         public string? expire_at { get; set; }
     }
     public class ReturnDTO
     {
-        public string? message { get; set; }
-        public int status { get; set; }
+        public string? Message { get; set; }
+        public int Status { get; set; }
     }
     public class ReturnTrackingDTO
     {
-        public int orderid { get; set; }
-        public DateTime date { get; set; }
-        public string? description { get; set; }
-        public int statusID { get; set; }
+        public int Orderid { get; set; }
+        public DateTime Date { get; set; }
+        public string? Description { get; set; }
+        public int StatusID { get; set; }
     }
 }

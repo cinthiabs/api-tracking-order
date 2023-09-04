@@ -1,13 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Interface;
-using Elasticsearch.Net;
-using Nest;
 using Service.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Service.Service
 {
@@ -32,9 +25,9 @@ namespace Service.Service
             return returnOrder;
         }
 
-        public async Task<ReturnTracking> GetOrderTracking(int OrderID)
+        public async Task<List<ReturnTracking>> GetOrderTracking(int OrderID)
         {
-            var returnOrder = new ReturnTracking();
+            var returnOrder = new List<ReturnTracking>();
             try
             {
                 returnOrder = await _Repository.GetOrderTracking(OrderID);
@@ -49,7 +42,6 @@ namespace Service.Service
         public async Task<Return> InsertOrderTracking(int orderid, DateTime date, int statusID)
         {
             var returnOrder = new Return();
-            // passar 2 querys 
             try
             {
                 bool insertTracking = await _Repository.InsertOrderTracking(orderid, date, statusID);
