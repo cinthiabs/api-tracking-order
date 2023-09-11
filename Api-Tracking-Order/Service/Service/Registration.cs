@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Interface;
+using Nest;
 using Service.Interface;
 
 namespace Service.Service
@@ -44,17 +45,42 @@ namespace Service.Service
             var returnOrder = new Return();
             try
             {
-                bool insertTracking = await _Repository.InsertOrderTracking(orderid, date, statusID);
-                if (insertTracking == true)
+                var getStatus = await _Repository.GetStatus(statusID);
+                if (getStatus != 0)
                 {
-                    bool updateTracking = await _Repository.UpdateOrderTracing(orderid, statusID);
-                    if (updateTracking == true)
+                    var getTracking = await _Repository.GetOrderTracking(orderid);
+                    foreach (var item in getTracking)
                     {
-                        returnOrder = new Return()
+                        if (item.statusID == 10 || item.statusID == 6)
                         {
-                            status = 1,
-                            message = @$"Order {orderid} updated!"
-                        };
+                            returnOrder = new Return()
+                            {
+                                status = item.statusID,
+                                message = @$"Order {orderid} already updated!"
+                            };
+                            return returnOrder;
+                        }
+                    }
+                    bool insertTracking = await _Repository.InsertOrderTracking(orderid, date, statusID);
+                    if (insertTracking == true)
+                    {
+                        bool updateTracking = await _Repository.UpdateOrderTracing(orderid, statusID);
+                        if (updateTracking == true)
+                        {
+                            returnOrder = new Return()
+                            {
+                                status = 1,
+                                message = @$"Order {orderid} updated!"
+                            };
+                        }
+                        else
+                        {
+                            returnOrder = new Return()
+                            {
+                                status = 0,
+                                message = @$"Order not found!"
+                            };
+                        }
                     }
                     else
                     {
@@ -70,9 +96,10 @@ namespace Service.Service
                     returnOrder = new Return()
                     {
                         status = 0,
-                        message = @$"Order not found!"
+                        message = @$"Status not found!"
                     };
                 }
+
 
             }
             catch (Exception Ex)

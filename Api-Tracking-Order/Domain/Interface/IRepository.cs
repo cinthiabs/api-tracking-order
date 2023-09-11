@@ -11,6 +11,8 @@ namespace Domain.Interface
         Task<List<ReturnTracking>> GetOrderTracking(int OrderID);
         Task<bool> InsertOrderTracking(int orderid, DateTime date, int statusID);
         Task<bool> UpdateOrderTracing(int OrderID, int statusID);
+        Task<int> GetStatus(int statusID);
+
 
     }
 }

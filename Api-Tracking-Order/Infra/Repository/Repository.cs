@@ -26,6 +26,21 @@ namespace Infra.Repository
 
             return returnQuery;
         }
+        public async Task<int> GetStatus(int statusID)
+        {
+            int returnQuery = 0;
+            try
+            {
+                var sqlQuery = $@"select statusid from StatusOrder where active=1 and statusID='{statusID}' ";
+                returnQuery = await _Connection.ExecSelect<int>(sqlQuery);
+            }
+            catch (Exception ex)
+            {
+                await LogError("GetStatus - Data", ex.ToString(), "API Tracking Order");
+            }
+
+            return returnQuery;
+        }
 
         public async Task<List<ReturnTracking>> GetOrderTracking(int OrderID)
         {
