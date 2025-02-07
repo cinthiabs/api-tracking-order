@@ -1,18 +1,10 @@
 ﻿using Application.Mappers;
-using Application.Interface;
-using Application;
-using Domain.Interface;
 using Infra.DapperConfig;
-using Infra.Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models;
-using Service.Interface;
-using Service.Service;
-using System.Configuration;
-using System.Reflection;
 using System.Text;
+using Api_Tracking_Order.DependencyInjection;
 
 namespace Api_Tracking_Order
 {
@@ -31,52 +23,7 @@ namespace Api_Tracking_Order
             services.AddControllers();
             services.AddAutoMapper(typeof(RootSetup));
             services.AddAutoMapper(typeof(ReturnSetup));
-
-            services.AddSwaggerGen(c =>
-            {
-                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                c.IncludeXmlComments(xmlPath);
-
-                c.SwaggerDoc("v1", new OpenApiInfo
-                {
-                    Title = "API Tracking Order",
-                    Version = "v1",
-                    Description = "WEB API - Responsible for inserting and returning tracking.",
-
-                    Contact = new OpenApiContact()
-                    {
-
-                        Name = "Cinthia Barbosa",
-                        Email = "cinthiabarbosa8d@outlook.com",
-                        Url = new Uri("https://github.com/cinthiabs")
-                    }
-                });
-
-                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-                {
-                    Description = "JWT Authorization header using the Bearer, Example: Bearer [your Token]",
-                    Name = "Authorization",
-                    In = ParameterLocation.Header,
-                    Type = SecuritySchemeType.ApiKey,
-                    Scheme = "Bearer"
-                });
-
-                c.AddSecurityRequirement(new OpenApiSecurityRequirement
-                {
-                    {
-                        new OpenApiSecurityScheme
-                        {
-                            Reference = new OpenApiReference
-                            {
-                                Type = ReferenceType.SecurityScheme,
-                                Id = "Bearer"
-                            }
-                        },
-                        Array.Empty<string>()
-                    }
-                });
-            });
+            services.AddSwaggerDocumentation(Configuration);
 
             services.AddControllersWithViews();
             services.AddAuthentication
@@ -104,10 +51,7 @@ namespace Api_Tracking_Order
                     .RequireAuthenticatedUser().Build());
             });
 
-            services.AddTransient<IRepository, Repository>();
-            services.AddTransient<IRegistration, Registration>();
-            services.AddTransient<IApplicationTracking, ApplicationTracking>();
-            services.AddTransient<IConnection, Connection>();
+            services.AddConfiguration();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

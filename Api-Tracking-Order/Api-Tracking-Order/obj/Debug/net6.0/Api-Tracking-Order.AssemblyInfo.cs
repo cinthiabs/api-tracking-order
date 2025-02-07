@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Api-Tracking-Order")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f83c7594277b393210277ed0836ee15968a6ee5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a75b37190ec2d7f36428a2922e7f17096bf7d94a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Api-Tracking-Order")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Api-Tracking-Order")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
