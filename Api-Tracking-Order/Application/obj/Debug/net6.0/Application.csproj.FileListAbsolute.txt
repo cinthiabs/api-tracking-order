@@ -44,7 +44,6 @@ D:\GIT\api-tracking-order\Api-Tracking-Order\Application\obj\Debug\net6.0\Applic
 D:\GIT\api-tracking-order\Api-Tracking-Order\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
 D:\GIT\api-tracking-order\Api-Tracking-Order\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
 D:\GIT\api-tracking-order\Api-Tracking-Order\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache
-D:\GIT\api-tracking-order\Api-Tracking-Order\Application\obj\Debug\net6.0\Application.csproj.CopyComplete
 D:\GIT\api-tracking-order\Api-Tracking-Order\Application\obj\Debug\net6.0\Application.dll
 D:\GIT\api-tracking-order\Api-Tracking-Order\Application\obj\Debug\net6.0\refint\Application.dll
 D:\GIT\api-tracking-order\Api-Tracking-Order\Application\obj\Debug\net6.0\Application.pdb
@@ -66,3 +65,10 @@ C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-T
 C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Application\obj\Debug\net6.0\refint\Application.dll
 C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Application\obj\Debug\net6.0\Application.pdb
 C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Application\obj\Debug\net6.0\ref\Application.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Application\obj\Debug\net6.0\Application.sourcelink.json
+D:\GIT\api-tracking-order\Api-Tracking-Order\Application\obj\Debug\net6.0\Applicat.44B5EDA2.Up2Date
+D:\GIT\api-tracking-order\Api-Tracking-Order\Application\bin\Debug\net6.0\Microsoft.Azure.Cosmos.ServiceInterop.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Application\bin\Debug\net6.0\Cosmos.CRTCompat.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Application\bin\Debug\net6.0\msvcp140.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Application\bin\Debug\net6.0\vcruntime140.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Application\bin\Debug\net6.0\vcruntime140_1.dll

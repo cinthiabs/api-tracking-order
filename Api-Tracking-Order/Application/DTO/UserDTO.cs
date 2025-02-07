@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace Application.DTO
+namespace Application.Dto;
+
+public class UserDto
 {
-    public class UserDTO
-    {
-        [Required(ErrorMessage = "This field {0} is required")]
-        public string User { get; set; }
-        [Required(ErrorMessage = "This field {0} is required")]
-        public string Password { get; set; }
-    }
+    [Required(ErrorMessage = "This field {0} is required")]
+    public string User { get; set; } = default!;
+    [Required(ErrorMessage = "This field {0} is required")]
+    public string Password { get; set; } = default!;
 }

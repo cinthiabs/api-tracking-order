@@ -1,4 +1,4 @@
-﻿using Application.DTO;
+﻿using Application.Dto;
 using Application.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -13,11 +13,11 @@ namespace Api_Tracking_Order.Controllers
     public class LoginController : ControllerBase
     {
         private readonly IConfiguration _config;
-        private readonly IServiceTracking _service;
-        public LoginController(IConfiguration Configuration, IServiceTracking service)
+        private readonly IApplicationTracking _application;
+        public LoginController(IConfiguration Configuration, IApplicationTracking application)
         {
             _config = Configuration;
-            _service = service;
+            _application = application;
         }
 
         /// <param name="login">Teste</param>
@@ -25,11 +25,11 @@ namespace Api_Tracking_Order.Controllers
         /// <response code="200">Authenticated</response>
         /// <response code="400">Access denied!</response>
         /// <response code="500">Internal error please contact.</response>
-        [ProducesResponseType(typeof(ReturnSucessDTO),StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ReturnDTO), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(ReturnDTO), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(ReturnSucessDto),StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ReturnDto), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ReturnDto), StatusCodes.Status500InternalServerError)]
         [HttpPost]
-        public async Task<IActionResult> Login([FromBody] UserDTO login)
+        public async Task<IActionResult> Login([FromBody] UserDto login)
         {
             try
             {
@@ -38,10 +38,10 @@ namespace Api_Tracking_Order.Controllers
                 if (result)
                 {
                     var tokenString = TokenJWT();
-                    var returnSucess = new ReturnSucessDTO();
+                    var returnSucess = new ReturnSucessDto();
                     var nextToken = DateTime.Now.AddMinutes(60).ToString("yyyy-MM-ddTHH:mm:ss-ff:00");
 
-                    returnSucess = new ReturnSucessDTO()
+                    returnSucess = new ReturnSucessDto()
                     {
                         Message = "OK",
                         Status = 200,
@@ -57,7 +57,7 @@ namespace Api_Tracking_Order.Controllers
                 }
                 else
                 {
-                    return Unauthorized(new ReturnDTO { Message = "Access denied!", Status  = 0 });
+                    return Unauthorized(new ReturnDto { Message = "Access denied!", Status  = 0 });
                 }
             }
             catch (Exception)
@@ -82,9 +82,9 @@ namespace Api_Tracking_Order.Controllers
             var tokenHandler = new JwtSecurityTokenHandler();
             return tokenHandler.WriteToken(token);
         }
-        private async Task<bool> UserValidation(UserDTO login)
+        private async Task<bool> UserValidation(UserDto login)
         {
-            var query = await _service.userQuery(login);
+            var query = await _application.UserQuery(login);
             var validation = query > 0;
             return validation;
         }

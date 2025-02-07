@@ -207,7 +207,6 @@ D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\obj\Debug\net6.0
 D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\obj\Debug\net6.0\staticwebassets.build.json
 D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\obj\Debug\net6.0\staticwebassets.development.json
 D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\obj\Debug\net6.0\scopedcss\bundle\Api-Tracking-Order.styles.css
-D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\obj\Debug\net6.0\Api-Tracking-Order.csproj.CopyComplete
 D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\obj\Debug\net6.0\Api-Tracking-Order.dll
 D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\obj\Debug\net6.0\refint\Api-Tracking-Order.dll
 D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\obj\Debug\net6.0\Api-Tracking-Order.xml
@@ -286,3 +285,30 @@ C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-T
 C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\obj\Debug\net6.0\Api-Tracking-Order.pdb
 C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\obj\Debug\net6.0\Api-Tracking-Order.genruntimeconfig.cache
 C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\obj\Debug\net6.0\ref\Api-Tracking-Order.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\obj\Debug\net6.0\Api-Tracking-Order.sourcelink.json
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\obj\Debug\net6.0\Api-Trac.64EDD10E.Up2Date
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Microsoft.Azure.Cosmos.ServiceInterop.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Cosmos.CRTCompat.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\msvcp140.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\vcruntime140.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\vcruntime140_1.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Ardalis.Result.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Ardalis.Result.AspNetCore.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Azure.Core.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Microsoft.Azure.Cosmos.Client.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Microsoft.Azure.Cosmos.Core.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Microsoft.Azure.Cosmos.Direct.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Microsoft.Azure.Cosmos.Serialization.HybridRow.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Microsoft.Bcl.HashCode.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\System.ClientModel.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\System.Memory.Data.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\System.Text.Json.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\runtimes\win-x64\native\Cosmos.CRTCompat.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Azure.Cosmos.ServiceInterop.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\runtimes\win-x64\native\msvcp140.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\runtimes\win-x64\native\vcruntime140.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Api-Tracking-Order\bin\Debug\net6.0\runtimes\win-x64\native\vcruntime140_1.dll

@@ -4,7 +4,7 @@
         <name>Api-Tracking-Order</name>
     </assembly>
     <members>
-        <member name="M:Api_Tracking_Order.Controllers.LoginController.Login(Application.DTO.UserDTO)">
+        <member name="M:Api_Tracking_Order.Controllers.LoginController.Login(Application.Dto.UserDto)">
             <param name="login">Teste</param>
             <returns>Return data</returns>
             <response code="200">Authenticated</response>
@@ -19,7 +19,7 @@
             <remarks>Inform the ID of order </remarks>
             <returns>Return data</returns>
         </member>
-        <member name="M:Api_Tracking_Order.Controllers.TrackingController.InsertOrderTracking(Application.DTO.ReturnTrackingDTO)">
+        <member name="M:Api_Tracking_Order.Controllers.TrackingController.InsertOrderTracking(Application.Dto.ReturnTrackingDto)">
             <summary>
             Insert Order Tracking
             </summary>

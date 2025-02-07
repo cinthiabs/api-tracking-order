@@ -38,7 +38,6 @@ D:\GIT\api-tracking-order\Api-Tracking-Order\Service\obj\Debug\net6.0\Service.Ge
 D:\GIT\api-tracking-order\Api-Tracking-Order\Service\obj\Debug\net6.0\Service.AssemblyInfoInputs.cache
 D:\GIT\api-tracking-order\Api-Tracking-Order\Service\obj\Debug\net6.0\Service.AssemblyInfo.cs
 D:\GIT\api-tracking-order\Api-Tracking-Order\Service\obj\Debug\net6.0\Service.csproj.CoreCompileInputs.cache
-D:\GIT\api-tracking-order\Api-Tracking-Order\Service\obj\Debug\net6.0\Service.csproj.CopyComplete
 D:\GIT\api-tracking-order\Api-Tracking-Order\Service\obj\Debug\net6.0\Service.dll
 D:\GIT\api-tracking-order\Api-Tracking-Order\Service\obj\Debug\net6.0\refint\Service.dll
 D:\GIT\api-tracking-order\Api-Tracking-Order\Service\obj\Debug\net6.0\Service.pdb
@@ -58,3 +57,5 @@ C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-T
 C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Service\obj\Debug\net6.0\refint\Service.dll
 C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Service\obj\Debug\net6.0\Service.pdb
 C:\Users\LENOVO-EQP364\Downloads\api-tracking-order (1)\api-tracking-order\Api-Tracking-Order\Service\obj\Debug\net6.0\ref\Service.dll
+D:\GIT\api-tracking-order\Api-Tracking-Order\Service\obj\Debug\net6.0\Service.sourcelink.json
+D:\GIT\api-tracking-order\Api-Tracking-Order\Service\obj\Debug\net6.0\Service.csproj.Up2Date

@@ -1,6 +1,6 @@
-﻿using Application.AutoMapper;
+﻿using Application.Mappers;
 using Application.Interface;
-using Application.Service;
+using Application;
 using Domain.Interface;
 using Infra.DapperConfig;
 using Infra.Repository;
@@ -106,7 +106,7 @@ namespace Api_Tracking_Order
 
             services.AddTransient<IRepository, Repository>();
             services.AddTransient<IRegistration, Registration>();
-            services.AddTransient<IServiceTracking, ServiceTracking>();
+            services.AddTransient<IApplicationTracking, ApplicationTracking>();
             services.AddTransient<IConnection, Connection>();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
